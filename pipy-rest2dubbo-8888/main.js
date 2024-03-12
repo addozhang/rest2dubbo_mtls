@@ -3,7 +3,7 @@ pipy({
   _reqDubbo: undefined,
   _dubboStruct: [
     '2.0.2',
-    'io.flomesh.demo.api.BookWarehouseService',
+    'io.flomesh.demo.api.BookstoreService',
     'v1',
     'getBook',
     'Ljava/lang/String;',
@@ -17,11 +17,11 @@ pipy({
         ],
         [
           'path',
-          'io.flomesh.demo.api.BookWarehouseService'
+          'io.flomesh.demo.api.BookstoreService'
         ],
         [
           'interface',
-          'io.flomesh.demo.api.BookstoreService'
+          'io.flomesh.demo.api.BookBuyerService'
         ],
         [
           'version',
@@ -60,7 +60,7 @@ pipy({
           .mux().to(
             $ => $
               .encodeDubbo()
-              .connect('localhost:20880')
+              .connect('localhost:20881')
               .decodeDubbo()
           )
           .replaceMessage(
