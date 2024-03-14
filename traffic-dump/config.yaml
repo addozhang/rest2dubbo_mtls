@@ -1,7 +1,4 @@
 services:
-  - port: 30881
-    originalPort: 20881
-    type: dubbo
   - port: 30880
     originalPort: 20880  
     type: dubbo
